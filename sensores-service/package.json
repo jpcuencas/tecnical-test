@@ -1,0 +1,43 @@
+{
+    "name": "tecnical-test",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start-dev": "tsc && node dist/index.js",
+        "start": "node ./dist/index.js",
+        "build": "tsc",
+        "clean-build": "rm -rf dist/* && rm -rf dist",
+        "clean": "rm -rf node_modules/* && rm -rf node_modules",
+        "test": "tsc && npx eslint . && jest --forceExit",
+        "sonar": "jest --coverage && sonar-scanner"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "jest": {
+        "preset": "ts-jest",
+        "testEnvironment": "node",
+        "moduleNameMapper": {
+            "@/(.*)": "<rootDir>/$1"
+        }
+    },
+    "dependencies": {
+        "@types/express": "^4.17.21",
+        "@types/mongoose": "^5.11.97",
+        "@types/node": "^20.11.17",
+        "body-parser": "^1.20.2",
+        "express": "^4.18.2",
+        "mongoose": "^8.1.2",
+        "rm": "^0.1.8",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.3.3"
+    },
+    "devDependencies": {
+        "@types/jest": "^29.5.12",
+        "@types/supertest": "^6.0.2",
+        "jest": "^29.7.0",
+        "supertest": "^6.3.4",
+        "ts-jest": "^29.1.2"
+    }
+}

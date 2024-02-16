@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/beige.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>Vodafone Exercice Backend</section>
+            <section>
+                <section>
+                    <h3>Design a High-Level Solution.</h3>
+                </section>
+                <section>
+                    <h3>E/R Diagram (Database)</h3>
+                    <img src="./imgs/exerciceER.drawio.png" height="500" width="1100">
+                </section>
+                <section>
+                    <h3>MicroService Scheme (Arquitecture)</h3>
+                    <img src="./imgs/ProjectDiagram.drawio.png" height="550" width="1000">
+                </section>
+            </section>
+            <section>
+                <h3>Tecnologies</h3>
+                <p>For this solution I usted
+                    <ul>
+                        <li>NodeJS like appServer</li>
+                        <li>express to comunicate whit the app</li>
+                        <li>http library to clients in modules of microservices arquitecture</li>
+                        <li>fetch to apis in modules of microservices arquitecture</li>
+                        <li>jest for example unit test</li>
+                        <li>Typescript like programing language</li>
+                        <li>Mongo & moongose for persistence</li>
+                        <li>Reveal JS for this presentation</li>
+                    </ul>
+                </p>
+            </section>
+            <section>
+                <section>
+                    <h3>Component ARQ</h3>
+                    <img src="./imgs/code/Component ARQ.png" height="400" width="800">
+                </section>
+                <section>
+                    <h4>Define the endpoints expose from the API (Manage Sim)</h4>
+					<div>
+					<p>Sensor Service  /  Sensor Controller</p>
+						<img src="./imgs/code/SensorService.png" height="500" width="450">
+						<img src="./imgs/code/sensorController.png" height="500" width="450">
+					</div>
+                </section>
+                <section>
+                    <h4>Define the endpoints expose from the API (Collect sensors)</h4>
+				
+					<p>Sim API  /  Sensor Client</p>
+                    <img src="./imgs/code/SimApi.png" height="500" width="450">
+                    <img src="./imgs/code/SensorClient.png" height="500" width="450">
+                </section>
+            </section>
+
+            <section>
+				<section>
+					<h3>Questions</h3>
+				</section>
+				<section>
+					<h6>If you would need to add a monitoring system to this solution, what technologies would you
+	use and what would you change?</h6>
+					<p>I used tools like winston for generate logging and Elastic, witch read that logs and make a monitoring data screens</p>
+				</section>
+				<section>
+					<h6>If we want to enable DevOps on this solution for testing, CI/CD, how would that change or
+	implement your solution if at all?</h6>
+					<p>Well i use docker for deployment in a testing server and jest for implement test unit and cypress for the test end to end</p>
+					<p>and all of it controled by githubacions or jenkins</p>
+				</section>
+            </section>
+            
+            <section>
+                <h3>Doubs any more questons?</h3>
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>

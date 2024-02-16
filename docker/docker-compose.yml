@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  mongo:
+    image: mongo:4.4.1
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=$MONGOROOT
+      - MONGO_INITDB_ROOT_PASSWORD=$MONGOPASS
+    ports:
+      - "27017:27017"
+    container_name: cc-mongo
+

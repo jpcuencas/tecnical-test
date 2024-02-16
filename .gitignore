@@ -1,0 +1,15 @@
+.idea
+docker/logs
+.DS_Store
+.env
+cypress.env.json
+.gitattributes
+infrastructure/performance/k6/node_modules
+infrastructure/performance/k6/build
+infrastructure/performance/k6/yarn-error.log
+
+# python virtual env
+venv
+__pycache__
+
+newman-run-report*.json
